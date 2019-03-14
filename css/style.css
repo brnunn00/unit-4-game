@@ -1,0 +1,24 @@
+#heroBlocks{
+    display:flex;
+    flex-direction: row;
+    justify-content: start;
+    
+    
+}
+
+.heroObj{
+    padding: 15px;
+    border: 2px;
+    border-style: solid;
+    margin: 15px;;
+}
+
+#gameTitle{
+    float: right;
+    font-weight: bold;
+    padding-right: 50px;
+}
+
+#clearfix{
+    clear:both;
+}
