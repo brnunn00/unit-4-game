@@ -1,16 +1,27 @@
-#heroBlocks{
+.heroBlocks{
     display:flex;
     flex-direction: row;
     justify-content: start;
-    
-    
+      
 }
-
+body{
+  /* /  padding: 0 10px 0 10px; */
+}
+h2{
+    font-size: 18px;
+    margin: 2px 0 2px 0;
+    font-weight: bold;
+}
+h1{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+}
 .heroObj{
     padding: 15px;
     border: 2px;
     border-style: solid;
-    margin: 15px;;
+    margin: 10px;;
 }
 
 #gameTitle{
@@ -21,4 +32,10 @@
 
 #clearfix{
     clear:both;
+}
+
+.heroImg{
+    display: block;
+    width: 100px;
+    height: 100px;
 }
