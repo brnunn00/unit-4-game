@@ -18,9 +18,9 @@ $(document).ready(function () {
 
     var obi = {
         name: "Obi Wan Kenobi",
-        hp: 130,
+        hp: 115,
         baseAttack: 8,
-        counterAttack: 50,
+        counterAttack: 30,
         forceType: "Light",
         sourceImg: "images/obi-young.jpg",
         audio: new Audio("audio/obiwan.wav"),
@@ -31,7 +31,7 @@ $(document).ready(function () {
     }
     var luke = {
         name: "Luke Skywalker",
-        hp: 100,
+        hp:100,
         baseAttack: 25,
         counterAttack: 5,
         audio: new Audio("audio/luke.wav"),
@@ -44,9 +44,9 @@ $(document).ready(function () {
     }
     var insidious = {
         name: "Darth Sidious",
-        hp: 90,
-        baseAttack: 20,
-        counterAttack: 10,
+        hp: 80,
+        baseAttack: 30,
+        counterAttack: 18,
         forceType: "Dark",
         sourceImg: "images/emp.png",
         audio: new Audio("audio/power.wav"),
@@ -57,9 +57,9 @@ $(document).ready(function () {
     }
     var maul = {
         name: "Darth Maul",
-        hp: 120,
-        baseAttack: 16,
-        counterAttack: 26,
+        hp: 140,
+        baseAttack: 7,
+        counterAttack: 10,
         audio: new Audio("audio/maul.wav"),
         sourceImg: "images/maul.png",
         forceType: "Dark",
@@ -129,6 +129,7 @@ $(document).ready(function () {
         if (gameOver || !enemySelected) { return; }
         $("#combatEntries").empty();
         var res = enemyHP - heroAP;
+        console.log('hero hp' + heroHP + ' enemy CounterATT' + enemyHero.counterAttack);
         var userRes = heroHP - enemyHero.counterAttack;
 
         //there is probably an easier way to do this. Please let me know.
@@ -136,8 +137,9 @@ $(document).ready(function () {
         $("#" + curEnemyId + "Text").text("HP: " + res);
         if (res <= 0 && userRes > 0) {
             //beat enemy, clear cur enemy and remove from defender section, print output.
-
+            heroHP = parseInt(userRes);
             enemySelected = false;
+            $('#attButton').attr("style", "visibility:hidden");
 
 
             heroesLeft--;
@@ -221,14 +223,22 @@ $(document).ready(function () {
         if (outcome == "lose"){
             $('.combatText').each(function(i) {
             $(this).attr("style", "color:red");
+            if (userHero.forceType ==="Light"){
+         $("#enemySelectPrompt").text("Trust the force, the light side must prevail!");
+            }else {
+            $("#enemySelectPrompt").text("The power of the dark side has failed you. This cannot be!");
+            }
             });
 loseAudio.play();
+        } else {
+            $("#enemySelectPrompt").text("You are the ultimate force in the galaxy!");
+
         }
         let str = "You " + outcome + "! Reset to play again";
         addCombatText(str);
         $('#resetButton').attr("style", "visibility:visible");
         $('#attButton').attr("style", "visibility:hidden");
-        $("#enemySelectPrompt").text("");
+       
 
     }
 

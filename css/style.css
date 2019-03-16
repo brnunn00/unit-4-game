@@ -5,6 +5,11 @@
    
       
 }
+.combatTextSec{
+    display:flex;
+    flex-direction: row;
+    justify-content: start;
+}
 /* background code taken from https://css-tricks.com/perfect-full-page-background-image/ best way to keep background
 image where it is without worrying about repeat if the page grows.*/
 .bg{
@@ -17,6 +22,7 @@ image where it is without worrying about repeat if the page grows.*/
   position: fixed;
   top: 0;
   left: 0;
+  opacity: .5;
 }
 #pageWrapper{
     position: relative;
@@ -35,11 +41,13 @@ h2{
     font-size: 18px;
     margin: 2px 0 2px 0;
     font-weight: bold;
+    color: #167BB2;
 }
 h1{
     font-size: 24px;
     font-weight: bold;
     padding: 10px;
+    color: #6880B2;
 }
 .heroObj{
     /* padding: 15px; */
@@ -77,9 +85,9 @@ h1{
     color: green;
 }
 #combatEntries{
-    background: whitesmoke;
+    background: lightblue;
     max-width: 40%;
-    
+    /* padding: 5px; */
     margin-bottom: 3px;
 }
 .heroText.enemy{
@@ -96,3 +104,22 @@ h1{
     margin-right: auto;
 }
 
+button{
+    box-sizing: border-box;
+    appearance: none;
+    background-color: red;
+    border: 2px solid red;
+    border-radius: 0.6em;
+    color:white;   
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 10px;
+    padding: .5em 1em;
+    text-decoration: none;
+    text-align: center;  
+    font-weight: 700;
+  
+  }
