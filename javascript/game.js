@@ -22,7 +22,7 @@ $(document).ready(function () {
         baseAttack: 8,
         counterAttack: 30,
         forceType: "Light",
-        sourceImg: "images/obi-young.jpg",
+        sourceImg: "images/OBI-YOUNG.jpg",
         audio: new Audio("audio/obiwan.wav"),
         lvlUp: function (curAP) {
             let newAP = (this.baseAttack + curAP);
