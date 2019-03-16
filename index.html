@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="javascript/game.js"></script>
   
@@ -14,7 +16,8 @@
 
 </head>
 <body>
-    
+        <img class="bg" src="images/hoth.jpeg">
+        <div id="pageWrapper">
     <header id="header"> <h1 id="gameTitle">Star Wars Game!</h2> </header>
     <hr id='clearfix'>
 
@@ -33,9 +36,11 @@
     </section>
 
 
-    <section class ="enemyBlocks"> 
+    <section> 
     <h2 id="enemySelectPrompt"> </h2>
+    <div class="enemyBlocks">
         
+    </div>
     </section>
     <section class="fightSection">
 
@@ -59,7 +64,10 @@
     <button id="resetButton" style="visibility:hidden;">Try Again</button>
 
     </section>
-
+    <audio class="audios" id="yes-audio" controls preload="none" style="display:none"> 
+            <source src="audio/power.wav" type="audio/mpeg">
+         </audio>
+</div>
 
 </body>
 </html>

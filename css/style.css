@@ -1,11 +1,35 @@
-.heroBlocks{
+.heroBlocks, .enemyBlocks{
     display:flex;
     flex-direction: row;
     justify-content: start;
+   
       
+}
+/* background code taken from https://css-tricks.com/perfect-full-page-background-image/ best way to keep background
+image where it is without worrying about repeat if the page grows.*/
+.bg{
+    /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;	
+  /* Set up proportionate scaling */
+    width: 100%;
+  height: auto; 
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#pageWrapper{
+    position: relative;
+}
+body, html{
+    height: 100%;
+    margin: 0;
 }
 body{
   /* /  padding: 0 10px 0 10px; */
+  font-family: 'Black Ops One', cursive, Arial, Helvetica, sans-serif;
+ 
+padding-left: 25px;
 }
 h2{
     font-size: 18px;
@@ -18,24 +42,57 @@ h1{
     padding: 10px;
 }
 .heroObj{
-    padding: 15px;
-    border: 2px;
-    border-style: solid;
-    margin: 10px;;
+    /* padding: 15px; */
+    border: 2px solid green;
+    margin: 0 5px 5px 0;
+    background: white;
+    word-wrap: break-word;
+    text-align:center ;
+    width: 200px;
+    height: 150px;
+ 
+  
 }
 
 #gameTitle{
     float: right;
     font-weight: bold;
-    padding-right: 50px;
+    padding-right: 150px;
 }
 
 #clearfix{
     clear:both;
 }
-
+.heroText{
+    text-align:center ;
+  padding-top: 5px;;
+}
+.heroObj.ally{
+    border: 2px solid green;
+}
+.heroObj.enemy{
+    border: 2px solid red;
+}
+.heroText.ally{
+    color: green;
+}
+#combatEntries{
+    background: whitesmoke;
+    max-width: 40%;
+    
+    margin-bottom: 3px;
+}
+.heroText.enemy{
+    color: red;
+}
 .heroImg{
     display: block;
-    width: 100px;
-    height: 100px;
+    /* width: 100px;
+    height: 50px; */
+    width:70%;
+    height: 70%;
+    text-align:center ;
+    margin-left:auto;
+    margin-right: auto;
 }
+
